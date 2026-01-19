@@ -144,7 +144,7 @@ def get_db():
         st.stop()
 
 db = get_db()
-USER_ID = (st.secrets.get("USER_ID") or os.getenv("USER_ID") or "prashanth").strip()
+USER_ID = (st.secrets.get("USER_ID") or os.getenv("USER_ID") or "vineel").strip()
 
 # ──────────────────────────────────────────────────────────────────────────────
 # Cached reads / aggregations (fast!)
