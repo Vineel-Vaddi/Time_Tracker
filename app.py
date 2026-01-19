@@ -1097,7 +1097,8 @@ with tab_planner:
 
     buf_key = f"planner_df_{wk}"
     sig_key = f"{buf_key}_sig"
-    df_fresh = pd.DataFrame(rows)
+    df_fresh = pd.DataFrame(rows, columns=["goal_id","title","category","rank","planned_current","backlog_in","total_target","notes"])
+
 
     # If the set of goals changed (added/removed), reset the buffer to the fresh DF
     goal_sig = tuple(sorted(df_fresh["goal_id"].tolist()))
